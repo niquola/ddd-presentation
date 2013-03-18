@@ -1,1 +1,1 @@
-# presentation about ruby for nonrubyst programmers on reveal.js 
+# presentation about Domain Drive Desing in russian for SPRUG
