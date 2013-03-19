@@ -23,7 +23,7 @@
     <!-- If the query includes 'print-pdf', use the PDF print sheet -->
     <script>
       document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-      setTimeout(function(){ location.reload(); },10000);
+      setTimeout(function(){ location.reload(); },50000);
     </script>
 
     <style>
@@ -44,7 +44,8 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
 	<section>
-	<h1>ДДД</h1>
+	<h1>DDD</h1>
+	<h3>Domain Driven Design</h3>
 	</section>
 	<section>
 	<h2>Хорошее приложение?</h2>
@@ -66,6 +67,7 @@
 	<section>
 	<h3>Ментальная Модель <br/>и<br/> Модель Реализации</h3>
 	<img src="ii.png"/>
+	<h3>Семантический Разрыв ☹ </h3>
 	</section>
 	<section>
 	<h3>Совместимость</h3>
@@ -85,6 +87,64 @@
 	<h3>Правильная Модель</h3>
 	<img src="rm.jpg"/>
 	</section>
+
+	<section>
+	<h3>Недвусмысленный язык</h3>
+	<h3>Ubiquitous language</h3>
+	<ul>
+	  <li>Code</li>
+	  <li>Communication</li>
+	  <li>Documentation</li>
+	  <li>Marketing</li>
+	</ul>
+	</section>
+	<section>
+	<ul>
+	  <li>
+	  <b>Entity (Reference Object):</b> Objects that have a distinct identity that runs through time and different representations.
+	  </li>
+	  <li>
+	  <b>Value Object</b>: Objects that matter only has the combination of their attributes.
+	  Two value objects with the same values for all their attributes are considered equal.
+	  </li>
+	  <li>
+	  <b>Service</b>: A standalone operation within the context of your domain.
+	  A Service Object collects one or more services into an object.
+	  Typically you will have only one instance of each service object type within your execution context.
+	  </li>
+	</ul>
+	</section>
+	<section>
+	<h3>Aggregate</h3>
+	<p>accessed by a root entity</p>
+	<p>guarantees the consistency => interact with as a unit</p>
+	<h3><a href="http://martinfowler.com/articles/nosqlKeyPoints.html">NoSql</a></h3>
+	<pre><code class="ruby">{
+  login: "",
+  email:"",
+  preferences: {
+   theme: "dark",
+   ...
+  },
+  rating: {
+    carma: -10,
+    activity: 100,
+    ...
+  },
+  permissions: ["admin","publisher"]
+}
+	  </code></pre>
+	</section>
+
+	<section>
+	<h3>Bouded Context</h3>
+	<h4>applicability of a model</h4>
+	<img src="bc.jpg"/>
+	</section>
+	<section>
+	<img src="ddd.png"/>
+	</section>
+
       </div>
     </div>
 
